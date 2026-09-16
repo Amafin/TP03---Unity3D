@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
     private float moveSpeed = 7f;
+    private float turnSpeed = 720f;
     private float jumpForce = 6f;
 
     public Transform groundCheck;
@@ -72,10 +73,15 @@ public class Player : MonoBehaviour
         Vector3 targetVelocity = moveDirection * moveSpeed;
         rb.linearVelocity = new Vector3(targetVelocity.x, rb.linearVelocity.y, targetVelocity.z);
 
-        // Optionnel : tourne la capsule vers sa direction de marche
+        // Tourne progressivementla capsule vers sa direction de marche
         if (moveDirection.sqrMagnitude > 0.01f)
         {
-            transform.forward = moveDirection;
+            Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
+            transform.rotation = Quaternion.RotateTowards(
+                transform.rotation,
+                targetRotation,
+                turnSpeed * Time.fixedDeltaTime
+            );
         }
     }
 }

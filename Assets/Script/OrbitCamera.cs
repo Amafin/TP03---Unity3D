@@ -8,8 +8,8 @@ public class OrbitCamera : MonoBehaviour
     private float distance = 5.0f;
     private float sensitivity = 0.15f;
     private Vector3 targetOffset = new Vector3(0f, 1.5f, 0f);
+    private float playerTurnSpeed = 720f;
 
-    // 0° = horizontal, valeurs positives = caméra vers le haut (regarde vers le bas)
     private float minPitch = 5f;   // Empêche de descendre sous le sol
     private float maxPitch = 70f;  // Empêche de passer au-dessus de la tête
 
@@ -49,7 +49,8 @@ public class OrbitCamera : MonoBehaviour
             // Clic Droit : Le Player pivote pour s'aligner sur la caméra (dos à elle)
             if (rightClick)
             {
-                target.rotation = Quaternion.Euler(0f, yaw, 0f);
+                Quaternion targetRotation = Quaternion.Euler(0f, yaw, 0f);
+                target.rotation = Quaternion.RotateTowards(target.rotation, targetRotation, playerTurnSpeed * Time.deltaTime);
             }
         }
 
