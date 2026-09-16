@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9f4313a771e05c64d8da7ae6bd19a19f
+timeCreated: 1500147228
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 95640
+  packageName: Toon RTS Units - Undead Demo
+  packageVersion: 1.1
+  assetPath: Assets/Toon_RTS/unded_Demo/prefab/UD_demo_character.prefab
+  uploadId: 980902

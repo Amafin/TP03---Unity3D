@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1dc38d9a9bb57a24b9ab5019c651f99d
+timeCreated: 1500148198
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 95640
+  packageName: Toon RTS Units - Undead Demo
+  packageVersion: 1.1
+  assetPath: Assets/Toon_RTS/unded_Demo/model/Materials/Undead_RTS_units_demo.mat
+  uploadId: 980902
