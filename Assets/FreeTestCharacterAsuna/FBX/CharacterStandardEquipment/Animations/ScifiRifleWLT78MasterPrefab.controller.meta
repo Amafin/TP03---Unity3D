@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 312fc1e1adfaed442af595e7903ea340
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 205897
+  packageName: Free Test Character Asuna
+  packageVersion: 2.2
+  assetPath: Assets/FreeTestCharacterAsuna/FBX/CharacterStandardEquipment/Animations/ScifiRifleWLT78MasterPrefab.controller
+  uploadId: 973392

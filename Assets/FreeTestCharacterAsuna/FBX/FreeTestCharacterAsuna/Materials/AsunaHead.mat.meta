@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5066dd69df84db44da459b3593ac034d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 205897
+  packageName: Free Test Character Asuna
+  packageVersion: 2.2
+  assetPath: Assets/FreeTestCharacterAsuna/FBX/FreeTestCharacterAsuna/Materials/AsunaHead.mat
+  uploadId: 973392

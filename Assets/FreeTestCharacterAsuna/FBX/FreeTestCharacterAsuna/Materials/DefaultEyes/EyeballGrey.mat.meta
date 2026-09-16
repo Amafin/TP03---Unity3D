@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ebfcc55adeff28744bae653370167ffd
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 205897
+  packageName: Free Test Character Asuna
+  packageVersion: 2.2
+  assetPath: Assets/FreeTestCharacterAsuna/FBX/FreeTestCharacterAsuna/Materials/DefaultEyes/EyeballGrey.mat
+  uploadId: 973392

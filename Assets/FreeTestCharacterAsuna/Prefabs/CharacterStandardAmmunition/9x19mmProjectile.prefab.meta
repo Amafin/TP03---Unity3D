@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: fcd8eda09ebe0574f928812b425a9e5c
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 205897
+  packageName: Free Test Character Asuna
+  packageVersion: 2.2
+  assetPath: Assets/FreeTestCharacterAsuna/Prefabs/CharacterStandardAmmunition/9x19mmProjectile.prefab
+  uploadId: 973392

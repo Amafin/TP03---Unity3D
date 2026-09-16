@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     public LayerMask groundLayer;
 
     private Rigidbody rb;
+    private Animator anim;
     private Camera mainCamera;
     private bool isGrounded;
     private float horizontalInput;
@@ -20,6 +21,8 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        anim = GetComponent<Animator>();
+        isGrounded = true;
         mainCamera = Camera.main;
 
         // Capsule ne tourne pas lors de collisions
@@ -28,7 +31,6 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        // Détection du sol en 3D
         if (groundCheck != null)
         {
             isGrounded = Physics.CheckSphere(groundCheck.position, groundCheckRadius, groundLayer);
@@ -37,20 +39,25 @@ public class Player : MonoBehaviour
         var keyboard = Keyboard.current;
         if (keyboard == null) return;
 
-        // Inputs horizontaux (A/Q/Gauche et D/Droite)
         horizontalInput = 0f;
         if (keyboard.dKey.isPressed || keyboard.rightArrowKey.isPressed) horizontalInput += 1f;
         if (keyboard.qKey.isPressed || keyboard.aKey.isPressed || keyboard.leftArrowKey.isPressed) horizontalInput -= 1f;
 
-        // Inputs verticaux (Z/W/Haut et S/Bas)
         verticalInput = 0f;
         if (keyboard.zKey.isPressed || keyboard.wKey.isPressed || keyboard.upArrowKey.isPressed) verticalInput += 1f;
         if (keyboard.sKey.isPressed || keyboard.downArrowKey.isPressed) verticalInput -= 1f;
 
-        // Saut
         if (keyboard.spaceKey.wasPressedThisFrame && isGrounded)
         {
             rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, rb.linearVelocity.z);
+        }
+
+        if (anim != null)
+        {
+            float currentSpeed = new Vector2(horizontalInput, verticalInput).magnitude;
+
+            anim.SetFloat("Speed", currentSpeed);
+            anim.SetBool("IsGrounded", isGrounded);
         }
     }
 

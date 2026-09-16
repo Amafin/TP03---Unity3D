@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 18adc82d0f8eab84ebee09c6e82e975e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 205897
+  packageName: Free Test Character Asuna
+  packageVersion: 2.2
+  assetPath: Assets/FreeTestCharacterAsuna/FBX/CharacterStandardEquipment/Materials/CharacterStandardEquipment.mat
+  uploadId: 973392

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c4441d87e0bbf114f9bfad70cf7e24d1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 205897
+  packageName: Free Test Character Asuna
+  packageVersion: 2.2
+  assetPath: Assets/FreeTestCharacterAsuna/FBX/FreeTestCharacterAsuna/Materials/DefaultEyes/Cornea.mat
+  uploadId: 973392
