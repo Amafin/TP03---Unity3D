@@ -65,7 +65,6 @@ public class Player : MonoBehaviour
     {
         if (mainCamera == null) return;
 
-        // Vecteurs avant/droite de la caméra projetés sur le plan horizontal (XZ)
         Vector3 camForward = mainCamera.transform.forward;
         Vector3 camRight = mainCamera.transform.right;
         camForward.y = 0f;
@@ -73,14 +72,10 @@ public class Player : MonoBehaviour
         camForward.Normalize();
         camRight.Normalize();
 
-        // Calcul de la direction relative à la vue caméra
         Vector3 moveDirection = (camForward * verticalInput + camRight * horizontalInput).normalized;
-
-        // Application du déplacement en préservant la gravité (vitesse Y)
         Vector3 targetVelocity = moveDirection * moveSpeed;
         rb.linearVelocity = new Vector3(targetVelocity.x, rb.linearVelocity.y, targetVelocity.z);
 
-        // Tourne progressivementla capsule vers sa direction de marche
         if (moveDirection.sqrMagnitude > 0.01f)
         {
             Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
