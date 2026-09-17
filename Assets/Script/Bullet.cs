@@ -2,22 +2,37 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private float speed = 20f;
+    private float speed = 25f;
     private float lifeTime = 3f;
-    private Rigidbody rb;
-
-    void Awake()
-    {
-        rb = GetComponent<Rigidbody>();
-    }
 
     void Start()
     {
-        if (rb != null)
+        Destroy(gameObject, lifeTime);
+    }
+
+    void Update()
+    {
+        transform.position += transform.forward * speed * Time.deltaTime;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        // Ne touche pas le joueur qui tire
+        if (other.CompareTag("Player")) return;
+
+        // Cherche le composant Health sur l'objet touché (ou son parent)
+        Health h = other.GetComponentInParent<Health>();
+        if (h != null)
         {
-            rb.linearVelocity = transform.forward * speed;
+            h.TakeDamage(1);
+            Destroy(gameObject);
+            return;
         }
 
-        Destroy(gameObject, lifeTime);
+        // Sol / Décor
+        if (other.gameObject.layer == LayerMask.NameToLayer("groundLayer"))
+        {
+            Destroy(gameObject);
+        }
     }
 }
